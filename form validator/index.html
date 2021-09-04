@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    
+    <title>Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up</h1>
+        <!-- Form -->
+        <form id="form" novalidate>
+            <!-- Full Name -->
+            <div lcass="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name" required minlength="3" maxlength="100" name="name">
+            </div>
+
+            <!-- Phone Number -->
+            <div lcass="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="555-555-555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+            </div>
+
+            <!-- email Number -->
+            <div lcass="form-group">
+                <label for="email">Full email</label>
+                <input type="email" id="email" placeholder="email@address.com" required name="email">
+            </div>
+
+            <!--  URL -->
+            <div lcass="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="google.com" required name="we site">
+            </div>
+
+            <!--  password -->
+            <div lcass="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create a password(Min. 8 characters)" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Please include at least 1 uppercase character, 1 lowercase character and 1 number">
+            </div>
+
+            <!--  password -->
+            <div lcass="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm a password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password">
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div calss="message-container">
+            <h3 id="message">Don't Hegitate!</h3>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
